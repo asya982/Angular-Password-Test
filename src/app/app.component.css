@@ -1,0 +1,107 @@
+* {
+  --gray: rgb(220, 218, 218);
+  --green: rgb(66, 197, 94);
+  --red: rgb(184, 31, 31);
+  --yellow: rgb(234, 210, 69);
+}
+
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: var(--gray) solid 1px;
+}
+
+.strength-container {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+.section {
+  height: 15px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid var(--gray);
+  background-color: var(--gray);
+}
+
+.strong {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.low:nth-of-type(1),
+.wrong {
+  background-color: var(--red);
+  border-color: var(--red);
+}
+
+.medium:nth-of-type(1),
+.medium:nth-of-type(2) {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+}
