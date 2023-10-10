@@ -9,32 +9,7 @@
 </div>
 
 <div class="content" role="main">
-  <section>
-    <p>Your password sholud contain:</p>
-    <ul>
-      <li *ngIf="status === 'wrong'">8-symbols minimum</li>
-      <li>Letters</li>
-      <li>Digits</li>
-      <li>Special Characters</li>
-    </ul>
-  </section>
-  <input
-    id="password"
-    type="password"
-    #password
-    (input)="changeValue(password.value)"
-  />
-  <div class="strength-container">
-    <div
-      *ngFor="let _ of [].constructor(3); let iterator = index"
-      class="section {{ status }}"
-    ></div>
-  </div>
-  <p *ngIf="password.value.length">
-    Your password:
-    {{ password.value }}
-  </p>
-
+  <app-password-form></app-password-form>
   <svg
     id="clouds"
     xmlns="http://www.w3.org/2000/svg"
